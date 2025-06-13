@@ -1,0 +1,122 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgba(14, 10, 10, 0.6);
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #1e9696;
+  box-shadow: 0 4px 10px rgba(189, 195, 19, 0.2);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: initial;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #1e9696;
+  transform: scale(1.05);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Sections */
+.section {
+  padding: 100px 20px;
+  height: 100vh;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #222;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+}
+
+/*btn*/
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e9696;
+  color: #000;
+}
+
+/* image */
